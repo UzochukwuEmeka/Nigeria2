@@ -1,0 +1,178 @@
+:root {
+  --primary-color: #12a15d;
+  --secondary-color: #ffffff;
+  --background-color: #f9f9f9;
+}
+body {
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+.main-container {
+  background-color: #f9f9f9;
+  margin-top: 65px;
+}
+.profile-container {
+  background-color: #fcfff2;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.profile-header .profile-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.profile-header .profile-image {
+  overflow: hidden;
+  width: 41px;
+  height: 41px;
+  border-radius: 30px;
+}
+
+.profile-body .total p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+.profile-body .total .total-number {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #6a6a6a;
+}
+
+.view-button,
+.setting-icon,
+.change-password-button {
+  background: #ffffff;
+  border: 0;
+  outline: 1px solid #12a15d;
+  color: #12a15d;
+  border-radius: 20px;
+  font-size: 1rem;
+  margin: 20px 0;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s transform;
+  border: 2px solid transparent;
+  padding: 8px 15px;
+}
+.view-button {
+  transform: scale(0.98);
+}
+
+/* Work list Style */
+
+.worklists-container {
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card-body .card-title .dispute,
+.claim {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 17px;
+  color: #eb5757;
+}
+.card-body .card-title .claim {
+  color: #12a15d;
+}
+.card-body {
+  padding: 0.2rem 1rem;
+}
+.card-body .card-title .new {
+  background: #12a15d;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 3px 12px;
+  border-radius: 1rem;
+}
+.card-body .card-title .arrow-right .fa-solid {
+  font-size: 22px;
+  color: #12a15d;
+}
+/* I will seprate this style later */
+.admin-container {
+  background-color: #f8ffe2;
+}
+
+.admin-body .row .profile-image img {
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.fa-sign-out {
+  font-size: 20px;
+  padding: 5px;
+  color: #12a15d;
+  background-color: #fff;
+  border: 2px solid #12a15d;
+}
+
+.change-password-button {
+  color: #ffffff;
+  background-color: #12a15d;
+  padding: auto;
+}
+.user-details-container {
+  background-color: #fff;
+  padding: 25px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.edit {
+  background-color: #ffffff;
+  cursor: pointer;
+  color: #12a15d;
+  border-radius: 1rem;
+  padding: 4px 18px;
+  border: 2px solid #12a15d;
+}
+
+/* MODAL */
+.personal-details-input {
+  width: 100%;
+  height: 40px;
+  background: #ededed;
+  border-radius: 30px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 9px 30px;
+  background: #12a15d;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  border: 1px solid #12a15d;
+  color: #fff;
+}
+.cancel-btn {
+  background-color: #fff;
+  color: #12a15d;
+}
+.modal-header {
+  border: none;
+}
+.modal-footer {
+  border: none;
+}

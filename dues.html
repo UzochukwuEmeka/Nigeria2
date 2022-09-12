@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/dues.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,900&family=Ms+Madi&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Water+Brush&display=swap" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top  ">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="image/coat.jpg"
+                        alt=""
+                        width="50"
+                        height="24"
+                        class="d-inline-block align-text-top me-5"
+                    >
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link  " aria-current="page" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="work-list.html">Worklist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="dues.html">Dues</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="event-log.html">Event Log</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="users.html">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="property.html">Properties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Report
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="property-report.html">Property Report</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="user-report.html">User Report</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="transaction-report.html">Tansaction Report</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="activites.html">Activity Report</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown me-3">
+                            <a
+                                class="nav-link"
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="profile-log-out"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="profile-log-out">
+                                <li>
+                                    <a class="dropdown-item" href="log-in.html">Log Out</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="change-password.html">Change Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid mt-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 mt-4">
+                    <div class="container p-4 ">
+                        <div class="table-header row d-flex justify-content-between align-items-center  ">
+                            <div class=" col-lg-2 col-12 text-center me-2 me-lg-0 mb-2 ps-5 user">
+                                <h4>Dues</h4>
+                            </div>
+                            <div class="header-button col-lg-6 col-12 ">
+                                <div class="row d-flex justify-content-lg-end  justify-content-around align-items-end">
+                                    <div class="col-9 col-lg-5 mb-2 me-lg-3">
+                                        <div class="role new-dues text-center" data-bs-toggle="modal" data-bs-target="#due-form">
+                                            <i class="fa fa-add" aria-hidden="true"></i>
+                                            Add New Dues
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-body  mt-4">
+                            <div class="row row-cols-1 row-cols-md-2 g-3 d-flex justify-content-between">
+                                <div class="col-lg-3 col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-sub-title">
+                                                <p> Dues</p>
+                                            </div>
+                                            <h4 class="card-title mb-4">CERTIFIED TRUE COPY...</h4>
+                                            <p class="card-text ">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                            <div class=" card price-card mt-4">
+                                                <div class="card-price  row d-felx justify-content-between text-center m-1  ">
+                                                    <div class="price-text col-4"> Price</div>
+                                                    <div class="price col-6" id="price">
+                                                        2000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-button row  mt-4">
+                                                <div class="col-6">
+                                                    <div>
+                                                        <a href="" class="edit-btn">
+                                                            Edit
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="" class="delete-btn">
+                                                        Delete
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-sub-title">
+                                                <p> Dues</p>
+                                            </div>
+                                            <h4 class="card-title mb-4">BULIDING PLAN...</h4>
+                                            <p class="card-text ">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                            <div class=" card price-card mt-4">
+                                                <div class="card-price  row d-felx justify-content-between text-center m-1 ">
+                                                    <div class="price-text col-4"> Price</div>
+                                                    <div class="price col-6" id="price">
+                                                        2000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-button row  mt-4">
+                                                <div class="col-6">
+                                                    <div>
+                                                        <a href="" class="edit-btn">
+                                                            Edit
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="" class="delete-btn">
+                                                        Delete
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-sub-title">
+                                                <p> Dues</p>
+                                            </div>
+                                            <h4 class="card-title mb-4">DIVIDENDS</h4>
+                                            <p class="card-text ">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                            <div class=" card price-card mt-4">
+                                                <div class="card-price  row d-felx justify-content-between text-center m-1 ">
+                                                    <div class="price-text col-4"> Price</div>
+                                                    <div class="price col-6" id="price">
+                                                        2000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-button row  mt-4">
+                                                <div class="col-6">
+                                                    <div>
+                                                        <a href="" class="edit-btn">
+                                                            Edit
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="" class="delete-btn">
+                                                        Delete
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-sub-title">
+                                                <p> Dues</p>
+                                            </div>
+                                            <h4 class="card-title mb-4">SEARCH FEE...</h4>
+                                            <p class="card-text ">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                            <div class=" card price-card mt-4">
+                                                <div class="card-price  row d-felx justify-content-between text-center m-1 ">
+                                                    <div class="price-text col-4"> Price</div>
+                                                    <div class="price col-6" id="price">
+                                                        2000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-button row  mt-4">
+                                                <div class="col-6">
+                                                    <div>
+                                                        <a href="" class="edit-btn">
+                                                            Edit
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="" class="delete-btn">
+                                                        Delete
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-sub-title">
+                                                <p> Dues</p>
+                                            </div>
+                                            <h4 class="card-title mb-4">PARTNERSHIP PROFIT</h4>
+                                            <p class="card-text ">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                            <div class=" card price-card mt-4">
+                                                <div class="card-price  row d-felx justify-content-between text-center m-1 ">
+                                                    <div class="price-text col-4"> Price</div>
+                                                    <div class="price col-6" id="price">
+                                                        2000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-button row  mt-4">
+                                                <div class="col-6">
+                                                    <div>
+                                                        <a href="" class="edit-btn">
+                                                            Edit
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="" class="delete-btn">
+                                                        Delete
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-sub-title">
+                                                <p> Dues</p>
+                                            </div>
+                                            <h4 class="card-title mb-4">PREMIUM ON LAND</h4>
+                                            <p class="card-text ">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                            <div class=" card price-card mt-4">
+                                                <div class="card-price  row d-felx justify-content-between text-center m-1 ">
+                                                    <div class="price-text col-4"> Price</div>
+                                                    <div class="price col-6" id="price">
+                                                        2000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-button row  mt-4">
+                                                <div class="col-6">
+                                                    <div>
+                                                        <a href="" class="edit-btn">
+                                                            Edit
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="" class="delete-btn">
+                                                        Delete
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-sub-title">
+                                                <p> Dues</p>
+                                            </div>
+                                            <h4 class="card-title mb-4">INTEREST ON FIXED ...</h4>
+                                            <p class="card-text ">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                            <div class=" card price-card mt-4">
+                                                <div class="card-price  row d-felx justify-content-between text-center m-1 ">
+                                                    <div class="price-text col-4"> Price</div>
+                                                    <div class="price col-6" id="price">
+                                                        2000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-button row  mt-4">
+                                                <div class="col-6">
+                                                    <div>
+                                                        <a href="" class="edit-btn">
+                                                            Edit
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="" class="delete-btn">
+                                                        Delete
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-sub-title">
+                                                <p> Dues</p>
+                                            </div>
+                                            <h4 class="card-title mb-4">ADMINISTRATIVE ...</h4>
+                                            <p class="card-text ">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                            <div class=" card price-card mt-4">
+                                                <div class="card-price  row d-felx justify-content-between text-center m-1 ">
+                                                    <div class="price-text col-4"> Price</div>
+                                                    <div class="price col-6" id="price">
+                                                        2000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-button row  mt-4">
+                                                <div class="col-6">
+                                                    <div>
+                                                        <a href="" class="edit-btn">
+                                                            Edit
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="" class="delete-btn">
+                                                        Delete
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer row mt-3 justify-content-center page-navigation-footer">
+                            <div class="col-12 text-center d-flex justify-content-center">
+                                <div class="pagination">
+                                    <a href="#">&laquo;</a>
+                                    <a href="#" class="active">1</a>
+                                    <a href="#"> 2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">&raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL -->
+    <div
+        class="modal fade "
+        id="due-form"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="due-form"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h4 class="modal-title" id="staticBackdropLabel">Dues</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Name of Dues</label>
+                        <input
+                            type="text"
+                            class="form-control dues-input "
+                            id="exampleFormControlInput1"
+                            placeholder="Enter Dues to be paid"
+                        >
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Description</label>
+                        <textarea class="form-control description " aria-label="With textarea" placeholder="Enter Dues to be paid"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Price</label>
+                        <input
+                            type="number"
+                            class="form-control dues-input "
+                            id="exampleFormControlInput1"
+                            placeholder="Enter price of Dues"
+                        >
+                    </div>
+                </div>
+                <div class="modal-footer d-flex  justify-content-start">
+                    <button type="button" class="save-btn" data-bs-dismiss="modal">Save</button>
+                    <button type="button" class="cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

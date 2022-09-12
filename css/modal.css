@@ -1,0 +1,266 @@
+.state-btn,
+.add-btn {
+  background: var(--secondary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--primary-color);
+  padding: 8px 22px;
+}
+
+.add-btn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.state-btn:hover {
+  color: var(--primary-color);
+}
+.add-btn:hover {
+  color: var(--secondary-color);
+}
+.property-clearance {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  border: 2px solid var(--primary-color);
+  padding: 9px 10px;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+/* ADD DOCUMENT MODAL */
+.state-input {
+  width: 100%;
+  height: 66px;
+  background: #ededed;
+  border-radius: 30px;
+}
+.back-btn,
+.add-document-btn {
+  padding: 9px 15px;
+  background: var(--primary-color);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  color: var(--secondary-color);
+}
+.back-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.back-btn:hover {
+  color: var(--primary-color);
+}
+
+.add-document-btn:hover {
+  color: var(--secondary-color);
+}
+.modal-header {
+  border: none;
+}
+.modal-footer {
+  border: none;
+}
+
+/* SELECT FORM STYLE */
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background: #ededed;
+  border-radius: 30px;
+  height: 66px;
+}
+
+/* Style OF ARROW INSIDE THE SELECT ELEMENT: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 60px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--primary-color) transparent transparent transparent;
+}
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--primary-color) transparent !important;
+  top: 50px !important;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #6c757d;
+  padding: 20px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: var(--secondary-color);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* USER MODAL STYLE FOR ASSIGN TASK TO ADMIN */
+
+.task {
+  background-color: var(--secondary-color);
+  height: 36px;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px auto;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+.txt {
+  color: var(--primary-color);
+}
+
+/* PROPERTY MODAL STYLE TO ATTACH PAPER-CLIP ICON TO FORM */
+.attach-img i {
+  position: absolute;
+}
+.attach-img {
+  width: 100%;
+}
+.icon {
+  padding-left: 310px;
+  padding-top: 28px;
+  color: var(--primary-color);
+  min-width: 50px;
+  text-align: center;
+}
+/* PROPERTY MODAL STYLE  FOR REQURIED DOCUMENT*/
+
+.document-require {
+  background-color: var(--secondary-color);
+  height: 36px;
+  text-align: center;
+  border-radius: 15px;
+  padding: 3px 2px;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  width: 200px;
+}
+/* PROFILE EDIT CONTACT STYLE */
+.division .select-selected {
+  height: 46px;
+}
+
+@media screen and (max-width: 1000px) {
+  .state-btn,
+  .add-btn {
+    font-size: 10px;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    padding: 8px 14px;
+    width: 100%;
+  }
+
+  .modal-text {
+    text-align: center;
+    font-size: 15px;
+  }
+  .property-clearance {
+    padding: 2px 2px;
+  }
+}

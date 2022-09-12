@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+        <link rel="stylesheet" href="css/users.css">
+        <link rel="stylesheet" href="css/user-report.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <link rel="stylesheet" href="css/card.css">
+        <link rel="stylesheet" href="css/button.css">
+        <link rel="stylesheet" href="css/property.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,900&family=Ms+Madi&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Water+Brush&display=swap" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top  ">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="image/coat.jpg"
+                        alt=""
+                        width="50"
+                        height="24"
+                        class="d-inline-block align-text-top me-5"
+                    >
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link  " aria-current="page" href="index.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="work-list.html">Worklist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="dues.html">Dues</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="event-log.html">Event Log</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="users.html">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="property.html">Properties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Report
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="property.html">Property</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="user-report.html">User Report</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="transaction-report.html">Tansaction Report</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="activites.html">Activity Report</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown me-3">
+                            <a
+                                class="nav-link"
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="profile-log-out"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="profile-log-out">
+                                <li>
+                                    <a class="dropdown-item" href="log-in.html">Log Out</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="change-password.html">Change Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid mt-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 mt-4">
+                    <div class="container p-5 ">
+                        <!-- PROPERTIES CONTAINER -->
+                        <div class="table-header row d-flex justify-content-between align-items-center text-center  ">
+                            <!-- PROPERTY TABLE HEADER -->
+                            <div class=" col-lg-1 col-12 text-center   mb-2 user">
+                                <h4>Properties</h4>
+                            </div>
+                            <!-- PROPERTY HEADER BUTTON -->
+                            <div class="header-button col-lg-10 col-12  ">
+                                <div class="row d-flex justify-content-between align-items-center">
+                                    <!-- PROPERTY BUTTON TO FILTER STATE -->
+                                    <div class="col-5 col-lg-3 mb-2 pe-0 pe-lg-5">
+                                        <div class="dropdown">
+                                            <button onclick="myFunction()" class="dropbtn work-list state-btn">
+                                                <i class="fa fa-filter p-0 m-0" aria-hidden="true"></i>
+                                                State
+                                                <i class="fa fa-angle-down p-0 m-0" aria-hidden="true"></i>
+                                            </button>
+                                            <div id="myDropdown" class="dropdown-content">
+                                                <input
+                                                    type="text"
+                                                    placeholder="Search.."
+                                                    id="myInput"
+                                                    onkeyup="filterFunction()"
+                                                >
+                                                <a href="#about">About</a>
+                                                <a href="#base">Base</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-5 col-lg-2 mb-2">
+                                        <div class="dropdown">
+                                            <button onclick="myFunction()" class="dropbtn work-list state-btn">
+                                                Abuja
+                                                <i class="fa fa-angle-down p-0 m-0" aria-hidden="true"></i>
+                                            </button>
+                                            <div id="myDropdown" class="dropdown-content">
+                                                <input
+                                                    type="text"
+                                                    placeholder="Search.."
+                                                    id="myInput"
+                                                    onkeyup="filterFunction()"
+                                                >
+                                                <a href="#about">About</a>
+                                                <a href="#base">Base</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- PROPERTY BUTTON TO ADD PROPERTY -->
+                                    <div class="col-12 col-lg-3 mb-2">
+                                        <div class="dropdown">
+                                            <button class="dropbtn work-list" data-bs-target="#add-new-property" data-bs-toggle="modal">
+                                                <i class="fa fa-add" aria-hidden="true"></i>
+                                                Add New Property
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- PROPERTY BUTTON TO ADD DOCUMENT WITH MODAL -->
+                                    <div class="col-5 col-lg-2 mb-2">
+                                        <div class="dropdown">
+                                            <button class="dropbtn work-list" data-bs-target="#properties-document" data-bs-toggle="modal">
+                                                Documents
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- PROPERTY BUTTON TO VIEW ESTATE WITH MODAL -->
+                                    <div class="col-5 col-lg-2 mb-2">
+                                        <div class="dropdown">
+                                            <button class="dropbtn work-list estate-btn" data-bs-target="#estate" data-bs-toggle="modal">
+                                                Estates
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PROPERTY TABLE BODY -->
+                        <div class="table-body  mt-4">
+                            <table class="table  ">
+                                <!-- TABLE HEADER -->
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Property ID</th>
+                                        <th scope="col">State</th>
+                                        <th scope="col">LGA</th>
+                                        <th scope="col">Address</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <!-- TABLE BODY -->
+                                <tbody>
+                                    <tr>
+                                        <td class="property-id">
+                                            <div class=" mb-3" id="property-id">000001</div>
+                                            <a href="" class="veiw-owner-btn">
+                                                View Owner
+                                            </a>
+                                        </td>
+                                        <td id="role">Abuja</td>
+                                        <td id="name">Garki</td>
+                                        <td id="email">3 Dante Keith Rd</td>
+                                        <td>
+                                            <div class="status-btn">Claimed</div>
+                                        </td>
+                                        <td id="veiw">
+                                            <div class="view-btn" data-bs-target="#property-card" data-bs-toggle="modal">
+                                                <a href="#">Veiw</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="property-id">
+                                            <div class=" mb-3" id="property-id">000001</div>
+                                            <a href="" class="veiw-owner-btn">
+                                                View Owner
+                                            </a>
+                                        </td>
+                                        <td id="role">Abuja</td>
+                                        <td id="name">Garki</td>
+                                        <td id="email">3 Dante Keith Rd</td>
+                                        <td>
+                                            <div class="status-btn disputed">Disputed</div>
+                                        </td>
+                                        <td id="veiw">
+                                            <div class="view-btn" data-bs-target="#property-card" data-bs-toggle="modal">
+                                                <a href="#">Veiw</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="property-id">
+                                            <div class=" mb-3" id="property-id">000001</div>
+                                            <a href="" class="veiw-owner-btn">
+                                                View Owner
+                                            </a>
+                                        </td>
+                                        <td id="role">Abuja</td>
+                                        <td id="name">Garki</td>
+                                        <td id="email">3 Dante Keith Rd</td>
+                                        <td>
+                                            <div class="status-btn under-validation">
+                                                <i class="fa fa-clock me-2" aria-hidden="true"></i>
+                                                Under Validation
+                                            </div>
+                                        </td>
+                                        <td id="veiw">
+                                            <div class="view-btn" data-bs-target="#property-card" data-bs-toggle="modal">
+                                                <a href="#"> Veiw</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="m-5">
+                                        <td class="property-id">
+                                            <div class=" mb-3" id="property-id">000001</div>
+                                            <a href="" class="veiw-owner-btn">
+                                                View Owner
+                                            </a>
+                                        </td>
+                                        <td id="role">Abuja</td>
+                                        <td id="name">Garki</td>
+                                        <td id="email">3 Dante Keith Rd</td>
+                                        <td>
+                                            <div class="status-btn claim-request">Claim Request</div>
+                                        </td>
+                                        <td id="veiw">
+                                            <div class="view-btn" data-bs-target="#property-card" data-bs-toggle="modal">
+                                                <a href="#"> Veiw</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="m-5">
+                                        <td class="property-id">
+                                            <div class=" mb-3" id="property-id">000001</div>
+                                            <a href="" class="veiw-owner-btn">
+                                                View Owner
+                                            </a>
+                                        </td>
+                                        <td id="role">Abuja</td>
+                                        <td id="name">Garki</td>
+                                        <td id="email">3 Dante Keith Rd</td>
+                                        <td>
+                                            <div class="status-btn unclaimed">
+                                                Unclaimed
+                                            </div>
+                                        </td>
+                                        <td id="veiw">
+                                            <div class="view-btn" data-bs-target="#property-card" data-bs-toggle="modal">
+                                                <a href="#"> Veiw</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL FOR DOCUMENT -->
+    <div
+        class="modal fade"
+        id="add-new-property"
+        aria-hidden="true"
+        aria-labelledby="add-new-propertylabel"
+        tabindex="-1"
+    >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="add-new-propertylabel">Add New Property</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-12 mt-3">
+                            <div class="state">
+                                <label for="state" class="form-label fs-6">Property ID</label>
+                                <input
+                                    type="number"
+                                    class="form-control state-input "
+                                    id="state"
+                                    placeholder="00000451"
+                                >
+                                <label for="state" class="form-label fs-6 text-muted">This  Field cannot be edited</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mt-3">
+                            <div class="state">
+                                <label for="state" class="form-label fs-6">Size(ft)</label>
+                                <input
+                                    type="text"
+                                    class="form-control state-input "
+                                    id="state"
+                                    placeholder="Enter your email"
+                                >
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mt-3">
+                            <div class="state ">
+                                <div class="custom-select ">
+                                    <label for="state" class="form-label fs-6">State</label>
+                                    <select>
+                                        <option value="0">Select State</option>
+                                        <option value="1">Audi</option>
+                                        <option value="2">BMW</option>
+                                        <option value="3">Citroen</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mt-3">
+                            <div class="state ">
+                                <div class="custom-select ">
+                                    <label for="state" class="form-label fs-6">LGA</label>
+                                    <select>
+                                        <option value="0">Enter the Local Goverment Area</option>
+                                        <option value="1">Audi</option>
+                                        <option value="2">BMW</option>
+                                        <option value="3">Citroen</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mt-3">
+                            <div class="state ">
+                                <div class="custom-select ">
+                                    <label for="state" class="form-label fs-6">Estate</label>
+                                    <select>
+                                        <option value="0">Select Desingated Estate</option>
+                                        <option value="1">Audi</option>
+                                        <option value="2">BMW</option>
+                                        <option value="3">Citroen</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mt-3">
+                            <div class="state">
+                                <label for="state" class="form-label fs-6"> Address</label>
+                                <input
+                                    type="text"
+                                    class="form-control state-input "
+                                    id="state"
+                                    placeholder="Enter Address"
+                                >
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mt-3">
+                            <div class="state">
+                                <label for="state" class="form-label fs-6">Attach Imae Property</label>
+                                <div class="attach-img">
+                                    <i class="fa fa-paperclip icon" aria-hidden="true"></i>
+                                    <input
+                                        type="text"
+                                        class="form-control state-input "
+                                        id="state"
+                                        placeholder="Attach image here "
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mt-3">
+                            <div class="state ">
+                                <div class="custom-select ">
+                                    <label for="state" class="form-label fs-6 ">Categories</label>
+                                    <select>
+                                        <option value="0">Select property categories</option>
+                                        <option value="1">Audi</option>
+                                        <option value="2">BMW</option>
+                                        <option value="3">Citroen</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- REQUIRED DOCUMENT -->
+                    <div class="require-document ">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="mt-3">Required Documents</p>
+                            <div class="state d-flex justify-content-start mt-4 align-items-center">
+                                <label for="state" class="form-label pt-2 ps-2">Select all</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class=" document-required task-assigned row justify-content-around align-items-center mt-2">
+                            <div class="col-5 col-lg-3 document-require mt-2 " id="document">
+                                <div class="porperty pt-1">   Addition of Properties</div>
+                            </div>
+                            <div class="col-5 col-lg-3 document-require mt-2  " id="document">
+                                <div class="porperty pt-1">   Addition of Properties</div>
+                            </div>
+                            <div class="col-5 col-lg-3 document-require mt-2 " id="document">
+                                <div class="porperty pt-1">   Addition of Properties</div>
+                            </div>
+                            <div class="col-5 col-lg-3 document-require mt-2 " id="document">
+                                <div class="porperty pt-1">   Addition of Properties</div>
+                            </div>
+                            <div class="col-5 col-lg-3 document-require mt-2 " id="document">
+                                <div class="porperty pt-1">   Addition of Properties</div>
+                            </div>
+                            <div class="col-5 col-lg-3 document-require mt-2 " id="document">
+                                <div class="porperty pt-1">   Addition of Properties</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-start mt-2">
+                        <button
+                            class="btn  add-property add-document-btn"
+                            id="add-document"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                        >Add Property</button>
+                        <button
+                            class="btn back-btn"
+                            data-bs-target="#share-report"
+                            data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
+                        >Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  DOCUMENT MODAL -->
+    <div
+        class="modal fade"
+        id="properties-document"
+        aria-hidden="true"
+        aria-labelledby="tansaction-modalLabel"
+        tabindex="-1"
+    >
+        <div class="modal-dialog modal-dialog-centered modal-lg  ">
+            <div class="modal-content">
+                <!-- MODAL HEADER -->
+                <div class="modal-header row justify-content-between text-center">
+                    <div class="col-lg-4 col-6 align-self-start order-2">
+                        <!-- FLITER STATE BUTTON -->
+                        <div class="select-state">
+                            <div class="btn-group" role="group">
+                                <button
+                                    id="btnGroupDrop1"
+                                    type="button"
+                                    class="btn state-btn dropdown-toggle "
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Select State
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12  order-lg-1 ">
+                        <h4 class="modal-text">Documents</h4>
+                    </div>
+                    <div class="col-lg-4  px-md-4 col-6">
+                        <!-- ADD DOCUMENT BUTTON -->
+                        <div class="add-document">
+                            <div class="" role="group">
+                                <button
+                                    type="button"
+                                    class="btn add-btn "
+                                    aria-expanded="false"
+                                    class="btn btn-primary"
+                                    data-bs-target="#exampleModalToggle2"
+                                    data-bs-toggle="modal"
+                                    data-bs-dismiss="modal"
+                                >
+                                    <i class="fa fa-add d-none d-lg-inline-block"></i>
+                                    Add Document
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MODAL BODY  -->
+                <div class="modal-body">
+                    <div class="modal-document-count">
+                        <h5>
+                            Documents for
+                            <span id="state">Abuja</span>
+                            (
+                            <span id="count">3</span>
+                            )
+                        </h5>
+                    </div>
+                    <div class="row justify-content-center mt-3 ">
+                        <div class="col-lg-4 col-9 mb-2">
+                            <div class="property-clearance text-center ">
+                                Property Clearance
+                                <i class=" fa fa-times me-lg-2 me-0  " id="cancel"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-9 mb-2">
+                            <div class="property-clearance text-center">
+                                Property Clearance
+                                <i class=" fa fa-times me-lg-2 me-0" id="cancel"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-9 mb-2">
+                            <div class="property-clearance text-center">
+                                Property Clearance
+                                <i class=" fa fa-times me-lg-2 me-0" id="cancel"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL FOR  ADD NEW DOCUMENT -->
+    <div
+        class="modal fade"
+        id="exampleModalToggle2"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1"
+    >
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Add New Document</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="state">
+                                <label for="state" class="form-label fs-6">State</label>
+                                <input
+                                    type="text"
+                                    class="form-control state-input "
+                                    id="state"
+                                    placeholder="Abuja"
+                                >
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="state">
+                                <label for="state" class="form-label fs-6">Name of Document</label>
+                                <input
+                                    type="text"
+                                    class="form-control state-input "
+                                    id="state"
+                                    placeholder="Enter the allocated name of the document "
+                                >
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="state">
+                                <label for="state" class="form-label fs-6">Attach Document</label>
+                                <input
+                                    type="text"
+                                    class="form-control state-input "
+                                    id="state"
+                                    placeholder="Attach the desired document  "
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <button
+                        class="btn back-btn"
+                        data-bs-target="#tansaction-modal"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                    >Back</button>
+                    <button
+                        class="btn add-document-btn"
+                        id="add-document"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                    >Add Document</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL FOR ESTATE -->
+    <div
+        class="modal fade"
+        id="estate"
+        aria-hidden="true"
+        aria-labelledby="share-reportLabel"
+        tabindex="-1"
+        data-bs-backdrop="static"
+    >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <!-- MODAL ESTATE HEADER -->
+                <div class="modal-header row justify-content-around align-items-center mt-4">
+                    <div class="col-12 col-lg-3">
+                        <h4>Estates</h4>
+                    </div>
+                    <!-- MODAL ESTATE HEADER BUTTON -->
+                    <div class="col-12 col-lg-8 d-flex justify-content-around">
+                        <!-- ESTATE FILTER BUTTON -->
+                        <div class="btn-group" role="group">
+                            <button
+                                id="btnGroupDrop1"
+                                type="button"
+                                class="btn state-btn dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Select State
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <li>
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- FLITER LOCAL GOVERNMENT BUTTON -->
+                        <div class="btn-group" role="group">
+                            <button
+                                id="btnGroupDrop1"
+                                type="button"
+                                class="btn state-btn dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                LGA
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <li>
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- ADD DOCUMENT BUUTON -->
+                        <div class="add-document">
+                            <div class="" role="group">
+                                <button
+                                    type="button"
+                                    class="btn add-btn "
+                                    aria-expanded="false"
+                                    class="btn btn-primary"
+                                    data-bs-target="#estate-add"
+                                    data-bs-toggle="modal"
+                                    data-bs-dismiss="modal"
+                                >
+                                    <i class="fa fa-add d-none d-lg-inline-block"></i>
+                                    Add Estate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ESTATE MODAL BODY -->
+                <div class="modal-body mt-3">
+                    <div class="number-of-esate me-4 ">
+                        <h5>
+                            Estates in
+                            <span id="local-gov">Agege</span>
+                            LGA
+                            (
+                            <span id="number-LGA">34</span>
+                            )
+                        </h5>
+                    </div>
+                    <div class="estates mt-4 table-responsive">
+                        <table class="table table-borderless ">
+                            <tbody>
+                                <tr></tr>
+                                <tr>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                </tr>
+                                <tr>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                </tr>
+                                <tr>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                </tr>
+                                <tr>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                </tr>
+                                <tr>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                    <td id="estate-LGA">Jakande Estate</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <button class="btn back-btn" data-bs-toggle="modal" data-bs-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        class="modal fade"
+        id="estate-add"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1"
+    >
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Add New Document</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="state">
+                                <label for="state" class="form-label fs-6">State</label>
+                                <input
+                                    type="text"
+                                    class="form-control state-input "
+                                    id="state"
+                                    placeholder="State"
+                                >
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <div class="state">
+                                <input
+                                    type="text"
+                                    class="form-control state-input "
+                                    id="state"
+                                    placeholder="Enter the Local Government Area "
+                                >
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="state">
+                                <label for="state" class="form-label fs-6">Estate</label>
+                                <input
+                                    type="text"
+                                    class="form-control state-input "
+                                    id="state"
+                                    placeholder="Enter Estate  "
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MODAL ESTATE FOOTER -->
+                <div class="modal-footer justify-content-start">
+                    <button
+                        class="btn back-btn"
+                        data-bs-target="#share-report"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                    >Back</button>
+                    <button
+                        class="btn add-document-btn"
+                        id="add-document"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                    >Add Estate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL FOR CARDS -->
+    <!-- Modal -->
+    <div
+        class="modal fade"
+        id="property-card"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-card modal-lg" style="max-width: 380px;">
+            <div class="modal-content">
+                <img src="image/house.jpg" alt="" class="img-fluid">
+                <div class="modal-content-body">
+                    <div class="modal-header row d-flex ">
+                        <div class="txt col-6">
+                            <h5>Property 1238909</h5>
+                        </div>
+                        <div class="stat col-6">
+                            <div class="status">
+                                Under-Validation
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="address">
+                                <p class="txt">Address</p>
+                                <p class="text-muted  fs-6">No. 2 Adamu Bello Street. Maitama; Abuja</p>
+                            </div>
+                            <div class="features">
+                                <div class="size">
+                                    <p class="txt">Size</p>
+                                    <p class="text-muted  fs-6">2.7 acres</p>
+                                </div>
+                                <div class="LGA">
+                                    <p class="txt">Local Government Area</p>
+                                    <p class="text-muted  fs-6">Wuse LGA</p>
+                                </div>
+                            </div>
+                            <!-- ATTACHMENT OF DOCUMENT -->
+                            <div class="attachment">
+                                <div class="txt mb-3">
+                                    <p>Attachment</p>
+                                </div>
+                                <div class="attached-document row d-flex justify-content-start ">
+                                    <div class="doc col-4 me-2">
+                                        <img
+                                            src="image/pdf.png"
+                                            alt=""
+                                            class="img-fluid"
+                                            style="height:100%;"
+                                        >
+                                    </div>
+                                    <div class="doc col-4 me-2">
+                                        <img
+                                            src="image/pdf.png"
+                                            alt=""
+                                            class="img-fluid"
+                                            style="height:100%;"
+                                        >
+                                    </div>
+                                    <div class="doc col-4 me-2">
+                                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="mt-4">
+                                    <div class="date text-muted text-start" id="date-comment">14 Jan</div>
+                                    <label for="exampleFormControlInput1" class="form-label txt">Disputer's Comment</label>
+                                    <textarea class="form-control  text-muted " aria-label="With textarea" rows="7"></textarea>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="date text-muted text-start" id="date-reply">15 Jan</div>
+                                    <label for="exampleFormControlInput1" class="form-label txt">Reply</label>
+                                    <textarea class="form-control description text-muted " aria-label="With textarea" rows="7"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer justify-content-start mt-4 ms-3">
+                                <button
+                                    class="btn add-document-btn "
+                                    id="add-property"
+                                    data-bs-toggle="modal"
+                                    data-bs-dismiss="modal"
+                                >Approve</button>
+                                <button
+                                    class="btn add-document-btn add-property"
+                                    id="add-property"
+                                    data-bs-toggle="modal"
+                                    data-bs-dismiss="modal"
+                                >Decline</button>
+                                <button
+                                    class="btn add-document-btn bg-white "
+                                    id="back"
+                                    data-bs-toggle="modal"
+                                    data-bs-dismiss="modal"
+                                >Back</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/form.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/filter.js"></script>
+</body>
+</html>

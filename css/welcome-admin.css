@@ -1,0 +1,160 @@
+:root {
+  --primary-color: #12a15d;
+  --secondary-color: #ffffff;
+  --background-color: #f9f9f9;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+
+.main-container {
+  background-color: #f9f9f9;
+  margin-top: 63px;
+}
+.full-container {
+  overflow: hidden;
+  height: 89vh;
+}
+.first-container {
+  overflow-y: auto;
+  height: 90vh;
+}
+.first-container::-webkit-scrollbar {
+  display: none;
+}
+.profile-container {
+  background-color: #fcfff2;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.profile-header .profile-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.profile-header .profile-image img {
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.profile-body .total p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+.profile-body .total .total-number {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #6a6a6a;
+}
+
+.work-list-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.worklists-container {
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 50px;
+}
+
+.card-body .card-title .dispute,
+.claim {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 17px;
+  color: #eb5757;
+}
+.card-body .card-title .claim {
+  color: #12a15d;
+}
+.worklist-card {
+  padding: 3px 4px;
+  border-radius: 10px;
+  height: 93px;
+}
+.card-body .card-title .new {
+  background: #12a15d;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 3px 12px;
+  border-radius: 1rem;
+}
+.card-body .card-title .arrow-right .fa-solid {
+  font-size: 22px;
+  color: #12a15d;
+}
+
+/* QUICK ACTION STYLE */
+.quick-action-card {
+  background-color: #fff;
+  border-radius: 12px;
+  height: 120px;
+  width: 110px;
+}
+.fa-check,
+.fa,
+.number {
+  background-color: var(--primary-color);
+  padding: 3px;
+  border-radius: 15px;
+  color: #ffffff;
+}
+.number {
+  background-color: red;
+  color: #ffffff;
+  text-align: center;
+  margin-left: 74px;
+}
+
+.image {
+  width: 40px;
+}
+/* PROPERTY CONTAINER */
+.veiw-all-button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border-radius: 15px;
+  border: 1px solid var(--primary-color);
+  padding: 6px;
+  outline: none;
+}
+.veiw-all-button a {
+  color: #fff !important;
+}
+@media (max-width: 1000px) {
+  .full-container {
+    overflow: none;
+    height: auto;
+  }
+  .first-container {
+    overflow-y: none;
+    height: auto;
+  }
+}

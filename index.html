@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/welcome-admin.css">
+        <link rel="stylesheet" href="css/admin.css">
+        <link rel="stylesheet" href="css/property.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+        <link rel="stylesheet" href="css/button.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,900&family=Ms+Madi&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Water+Brush&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top  ">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#">
+                    <div class="nav-image">
+                        <img src="image/coat.jpg" alt="" class="d-inline-block align-text-top me-5">
+                    </div>
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active " aria-current="page" href="index.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="work-list.html">Worklist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="dues.html">Dues</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="event-log.html">Event Log</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="users.html">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="property.html">Properties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Report
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="property-report.html">Property Report</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="user-report.html">User Report</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="transaction-report.html">Tansaction Report</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="activites.html">Activity Report</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown me-3 d-none d-lg-block">
+                            <a
+                                class="nav-link"
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="profile-log-out"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="profile-log-out">
+                                <li>
+                                    <a class="dropdown-item" href="log-in.html">Log Out</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="change-password.html">Change Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- MAIN CONTAINER  -->
+        <section>
+            <!-- OVERVIEW CONTAINER -->
+            <div class="container-fluid main-container ">
+                <div class="row d-flex justify-content-around full-container">
+                    <div class="col-lg-9 col-12 first-container  ">
+                        <div class="admin-container">
+                            <!-- OVERVIEW HEADER -->
+                            <div class="admin-header me-5 pt-5">
+                                <h4>Welcome Admin</h4>
+                                <div class="sub-title mt-4">
+                                    <p> What would you like to do today ?</p>
+                                </div>
+                            </div>
+                            <div class="admin-body me-5 mt-5">
+                                <div class="body-header">
+                                    <h4>
+                                        Overveiw
+                                    </h4>
+                                </div>
+                                <!-- OVERVIEW BODY -->
+                                <div class="body-cards mt-5 ms-5 ms-lg-4 ">
+                                    <div class="row mb-3 ">
+                                        <!-- OVERVIEW CARD -->
+                                        <div class="col-lg-3 col-12 col-md-6 mb-3 ">
+                                            <div class="card ">
+                                                <div class="card-header card-header-one text-center">Total No. of Property</div>
+                                                <div class="card-body">
+                                                    <h3 class="card-text text-center p-2">
+                                                        <span class="" id="overview-number"> 10M</span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- OVERVIEW CARD -->
+                                        <div class="col-lg-3 col-12 col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-header card-header-two text-center">Total No. of Claims</div>
+                                                <div class="card-body">
+                                                    <h3 class="card-text text-center p-2">
+                                                        <span class="" id="overview-number"> 8M</span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- OVERVIEW CARD -->
+                                        <div class="col-lg-3 col-12 col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-header card-header-three text-center">Total No. of Disputed</div>
+                                                <div class="card-body">
+                                                    <h3 class="card-text text-center p-2">
+                                                        <span class="" id="overview-number"> 1.5M</span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- OVERVIEW CARD -->
+                                        <div class="col-lg-3 col-12 col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-header card-header-four text-center">Total No. of Under Validation</div>
+                                                <div class="card-body">
+                                                    <h3 class="card-text text-center p-2">
+                                                        <span class="" id="overview-number"> 250k</span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-lg-5 ">
+                                        <!-- OVERVIEW CARD -->
+                                        <div class="col-lg-3 col-12 col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-header card-header-one text-center">Total No. of Unclaimed</div>
+                                                <div class="card-body">
+                                                    <h3 class="card-text text-center p-2">
+                                                        <span class="" id="overview-number"> 10M</span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- OVERVIEW CARD -->
+                                        <div class="col-lg-3 col-12 col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-header card-header-two text-center">Total No. of Users</div>
+                                                <div class="card-body">
+                                                    <h3 class="card-text text-center p-2">
+                                                        <span class="" id="overview-number"> 12M</span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- OVERVIEW CARD -->
+                                        <div class="col-lg-3 col-12 col-md-6 mb-3 ">
+                                            <div class="card">
+                                                <div class="card-header card-header-three text-center">Total No. of Admin</div>
+                                                <div class="card-body">
+                                                    <h3 class="card-text text-center p-2">
+                                                        <span class="" id="overview-number"> 10M</span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- OVERVIEW CARD -->
+                                        <div class="col-lg-3 col-12 col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-header card-header-four text-center">Total No. of Owners</div>
+                                                <div class="card-body">
+                                                    <h3 class="card-text text-center p-2">
+                                                        <span class="" id="overview-number"> 10M</span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- QUICK ACTION -->
+                        <div class="quick-action-container mt-4 ">
+                            <div class="quick-action-link me-3 ">
+                                <h4 class="mb-4 me-2 "> Quick Actions</h4>
+                                <div class="row d-flex justify-content-between align-items-center ">
+                                    <div class="col-lg-2 col-md-4 col-6">
+                                        <div class="quick-action-card ">
+                                            <div class="number-tag col-6 text-start pt-2 ">
+                                                <span class="number px-2" id="tag">2</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center mt-2">
+                                                <div class="image">
+                                                    <img src="image/black-building.png" alt="">
+                                                </div>
+                                                <div class="icon-tag">
+                                                    <div class="icon">
+                                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-4 col-6">
+                                        <div class="quick-action-card ">
+                                            <div class="number-tag col-6 text-start pt-2 ">
+                                                <span class="number px-2" id="tag">2</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center mt-2">
+                                                <div class="image">
+                                                    <img src="image/black-building.png" alt="">
+                                                </div>
+                                                <div class="icon-tag">
+                                                    <div class="icon">
+                                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-4 col-6 mt-3">
+                                        <div class="quick-action-card ">
+                                            <div class="number-tag col-6 text-start pt-2 ">
+                                                <span class="number px-2" id="tag">2</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center mt-2">
+                                                <div class="image">
+                                                    <img src="image/black-building.png" alt="">
+                                                </div>
+                                                <div class="icon-tag">
+                                                    <div class="icon">
+                                                        <i class="fa fa-exchange" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-4 col-6 mt-3">
+                                        <div class="quick-action-card ">
+                                            <div class="number-tag col-6 text-start pt-2 ">
+                                                <span class="number px-2" id="tag">2</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center mt-2">
+                                                <div class="image">
+                                                    <img src="image/black-building.png" alt="">
+                                                </div>
+                                                <div class="icon-tag">
+                                                    <div class="icon">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-4 col-4 mt-3">
+                                        <div class="quick-action-card ">
+                                            <div class="number-tag col-6 text-start pt-2 ">
+                                                <span class="number px-2" id="tag">2</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center mt-2">
+                                                <div class="image">
+                                                    <img src="image/black-building.png" alt="">
+                                                </div>
+                                                <div class="icon-tag">
+                                                    <div class="icon">
+                                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TABLE CONTAINER -->
+                        <div class="property-container mt-4 ">
+                            <div class=" me-3 ">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-4 me-2 "> Properties</h5>
+                                    <div class="view-property">
+                                        <div class="button">
+                                            <a href="#" class="view btn">
+                                                View All
+                                                <i class="fa-solid fa-arrow-right "></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-body table-responsive  mt-4">
+                                    <table class="table table-borderless   ">
+                                        <!-- TABLE HEADER -->
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Property ID</th>
+                                                <th scope="col">State</th>
+                                                <th scope="col">LGA</th>
+                                                <th scope="col">Address</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <!-- TABLE BODY -->
+                                        <div class="table-body  mt-4">
+                                            <table class="table  ">
+                                                <!-- TABLE HEADER -->
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Property ID</th>
+                                                        <th scope="col">State</th>
+                                                        <th scope="col">LGA</th>
+                                                        <th scope="col">Address</th>
+                                                        <th scope="col">Status</th>
+                                                        <th scope="col">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <!-- TABLE BODY -->
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="property-id">
+                                                            <div class=" mb-3" id="property-id">000001</div>
+                                                            <a href="" class="veiw-owner-btn">
+                                                                View Owner
+                                                            </a>
+                                                        </td>
+                                                        <td id="role">Abuja</td>
+                                                        <td id="name">Garki</td>
+                                                        <td id="email">3 Dante Keith Rd</td>
+                                                        <td>
+                                                            <div class="status-btn">Claimed</div>
+                                                        </td>
+                                                        <td id="veiw">
+                                                            <div class="view-btn" data-bs-target="#property-card" data-bs-toggle="modal">
+                                                                <a href="#">Veiw</a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="property-id">
+                                                            <div class=" mb-3" id="property-id">000001</div>
+                                                            <a href="" class="veiw-owner-btn">
+                                                                View Owner
+                                                            </a>
+                                                        </td>
+                                                        <td id="role">Abuja</td>
+                                                        <td id="name">Garki</td>
+                                                        <td id="email">3 Dante Keith Rd</td>
+                                                        <td>
+                                                            <div class="status-btn disputed">Disputed</div>
+                                                        </td>
+                                                        <td id="veiw">
+                                                            <div class="view-btn" data-bs-target="#property-card" data-bs-toggle="modal">
+                                                                <a href="#">Veiw</a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- RIGHT CONTAINER CONTAINING THE PROFILE REVEIW -->
+                            <div class="col-lg-3 col-12  right-container  first-container ">
+                                <div class="profile-container">
+                                    <div class="profile-header d-flex justify-content-around align-items-center  pt-3">
+                                        <div class="profile-text">
+                                            <h4>My Profile</h4>
+                                        </div>
+                                        <!-- PROFILE IMAGE -->
+                                        <div class="profile-image">
+                                            <img src="image/user4.jpg" alt="" class=" ">
+                                        </div>
+                                    </div>
+                                    <div class="profile-body mt-5 alg">
+                                        <div class="total d-flex justify-content-around align-items-center ">
+                                            <p>Total Claim Approval</p>
+                                            <span class="total-number pb-2" id="total-number">14</span>
+                                        </div>
+                                        <div class="total d-flex justify-content-around align-items-center mt-2">
+                                            <p>Total Claim Declined</p>
+                                            <span class="total-number pb-2" id="total-number">5</span>
+                                        </div>
+                                        <div class="total d-flex justify-content-around align-items-center mt-2">
+                                            <p>Total Dispute Resolved</p>
+                                            <span class="total-number pb-2" id="total-number">5</span>
+                                        </div>
+                                        <div class="total d-flex justify-content-around align-items-center mt-2">
+                                            <p>Total No. of  Users</p>
+                                            <span class="total-number mb-2" id="total-number">250</span>
+                                        </div>
+                                    </div>
+                                    <div class="profile-footer d-flex justify-content-around align-items-center">
+                                        <div class="button">
+                                            <a href="#" class="view btn">
+                                                View All
+                                                <i class="fa-solid fa-arrow-right "></i>
+                                            </a>
+                                        </div>
+                                        <div class="setting-icon ">
+                                            <i class="fa-solid fa-gear"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- WORKLIST REVIEW -->
+                                <div class="worklists-container">
+                                    <!-- WORKLIST HEADER -->
+                                    <div class="worklist-header d-flex justify-content-around align-items-center">
+                                        <div class="worklist-text  mt-4">
+                                            <h5>
+                                                Worklists
+                                                <span> (13)</span>
+                                            </h5>
+                                        </div>
+                                        <!-- WORKLIST LIST BUUTON LEADING TO WORKLIST PAGE -->
+                                        <div class="veiw-btn  mt-3 ">
+                                            <div class="button">
+                                                <a href="work-list.html" class="view btn work-list-btn">
+                                                    View All
+                                                    <i class="fa-solid fa-arrow-right "></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- WORKLIST BODY -->
+                                    <div class="worklist-body  d-flex flex-column mt-3">
+                                        <div class="card worklist-card ms-4 me-4 mb-2">
+                                            <div class="card-body">
+                                                <div class="card-title d-flex align-items-center justify-content-between">
+                                                    <p class="mt-1 dispute">Dispute</p>
+                                                    <div class="new d-flex align-items-center ms-4 mb-2 ">New</div>
+                                                    <div class="arrow-right  mb-2">
+                                                        <i class="fa-solid fa-arrow-right ms-5 "></i>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">
+                                                    Property
+                                                    <span>1294223</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card worklist-card mt-1 ms-4 me-4 mt-2">
+                                            <div class="card-body">
+                                                <div class="card-title d-flex align-items-center justify-content-between">
+                                                    <p class="mt-1 claim">Claim</p>
+                                                    <div class="new d-flex align-items-center ms-5 mb-2">New</div>
+                                                    <div class="arrow-right  mb-2">
+                                                        <i class="fa-solid fa-arrow-right ms-5 "></i>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">
+                                                    Property
+                                                    <span>1294223</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card worklist-card mt-1 ms-4 me-4 mt-2">
+                                            <div class="card-body">
+                                                <div class="card-title d-flex align-items-center justify-content-between">
+                                                    <p class="mt-1 claim">Claim</p>
+                                                    <div class="new d-flex align-items-center ms-5 mb-2">New</div>
+                                                    <div class="arrow-right  mb-2">
+                                                        <i class="fa-solid fa-arrow-right ms-5 "></i>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">
+                                                    Property
+                                                    <span>1294223</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <script src="js/bootstrap.bundle.min.js"></script>
+                <script src="js/form.js"></script>
+            </body>
+        </html>

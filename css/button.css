@@ -1,0 +1,158 @@
+a {
+  color: inherit;
+}
+.fa-arrow-right {
+  padding-left: 3px;
+}
+
+.button a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #04aa6d;
+  color: white;
+  border-radius: 50px;
+  outline: none;
+}
+
+.btn {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.button a:hover {
+  background-color: #12a15d;
+  color: white;
+  transform: scale(0.98);
+}
+button:active {
+  outline: none;
+  border: none;
+}
+button:focus {
+  outline: 0;
+}
+
+/* HEADER BUTTON STYLE */
+.table-header h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  color: #000000;
+}
+/* HEADER FLITER BUTTON STYLE */
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 10px 19px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: var(--primary-color);
+}
+
+/* The search field */
+#myInput {
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {
+  outline: 3px solid #ddd;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+/* HEADER FILTER BUTTON ENDS */
+
+/* ADD NEW ADMIN */
+
+.add-new-admin {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  padding: 10px 12px;
+}
+.setting-icon {
+  background: var(--primary-color);
+  border: 0;
+  outline: 0;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin: 20px 0;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s transform;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 10px 20px;
+  gap: 10px;
+}
+.setting-icon {
+  border: 2px solid #12a15d;
+  box-shadow: none;
+  font-size: 0.6rem;
+  padding: 10px 12px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.setting-icon .fa-gear {
+  font-size: 20px;
+  color: #12a15d;
+}
+.setting-icon:hover {
+  transform: scale(0.98);
+}
+a.work-list-btn {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+a.work-list-btn:hover {
+  background: inherit;
+  color: var(--primary-color);
+}

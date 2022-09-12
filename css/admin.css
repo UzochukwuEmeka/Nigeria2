@@ -1,0 +1,78 @@
+.admin-container {
+  background: #ffffff;
+  border-radius: 10px;
+}
+.admin-container .admin-header h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+.admin-container .admin-header .sub-title p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #5f5f5f;
+}
+.admin-container .admin-body .body-header h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #1b311d;
+}
+.card {
+  border-radius: 15px;
+}
+.body-cards .row .card-header-one {
+  background-color: #bb6bd9;
+
+  color: white;
+  font-size: 12px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.body-cards .row .card-header-two {
+  background-color: #12a15d;
+  color: white;
+  font-size: 12px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.body-cards .row .card-header-three {
+  background-color: #eb5757;
+  color: white;
+  font-size: 12px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.body-cards .row .card-header-four {
+  background-color: #f2994a;
+  color: white;
+  font-size: 12px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.quick-action-container,
+.property-container {
+  background-color: #f1f3fb;
+  padding: 25px;
+  border-radius: 10px;
+}
+.property-container {
+  background-color: var(--secondary-color);
+}
+.quick-action-container .quick-action-link a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}

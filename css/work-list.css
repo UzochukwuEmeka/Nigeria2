@@ -1,0 +1,58 @@
+.card {
+  border: 1px solid #e8e8e8;
+  box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.new {
+  background-color: #eb5757;
+  color: var(--secondary-color);
+  border-radius: 20px;
+  padding: 2px 6px;
+}
+.dispute-text {
+  color: #eb5757;
+}
+.fa-arrow-right {
+  color: var(--primary-color);
+  font-size: 20px;
+  cursor: pointer;
+}
+.due-text,
+.claim-text {
+  color: var(--primary-color);
+}
+/*PAGINATION STYLE  */
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.pagination a.active {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+/* MODAL WORK-LIST */
+.status-tag {
+  background: #f2994a;
+  border-radius: 20px;
+  text-align: center;
+  padding: 4px 12px;
+}
+@media (max-width: 900px) {
+  .dropbtn {
+    padding: 10px 8px;
+  }
+}

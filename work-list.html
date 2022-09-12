@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+        <link rel="stylesheet" href="css/users.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/work-list.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <link rel="stylesheet" href="css/card.css">
+        <link rel="stylesheet" href="css/button.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,900&family=Ms+Madi&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Water+Brush&display=swap" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top  ">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="image/coat.jpg"
+                        alt=""
+                        width="50"
+                        height="24"
+                        class="d-inline-block align-text-top me-5"
+                    >
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link  " aria-current="page" href="index.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active " href="work-list.html">Worklist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dues.html">Dues</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="event-log.html">Event Log</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="users.html">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="property.html">Properties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Report
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="property-report.html">Property Report</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="user-report.html">User Report</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="transaction-report.html">Tansaction Report</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="activites.html">Activity Report</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown me-3">
+                            <a
+                                class="nav-link"
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="profile-log-out"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="profile-log-out">
+                                <li>
+                                    <a class="dropdown-item" href="log-in.html">Log Out</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="change-password.html">Change Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid mt-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 mt-4">
+                    <div class="container p-4 ">
+                        <div class="table-header row d-flex justify-content-between align-items-center  ">
+                            <div class=" col-lg-2 col-12 text-center ms-5 ps-5 user">
+                                <h4>Worklist</h4>
+                            </div>
+                            <div class="header-button col-lg-9 col-12 text-center ">
+                                <div class="row d-flex justify-content-end align-items-start">
+                                    <div class="col-6 col-lg-4 ">
+                                        <div class="dropdown">
+                                            <button onclick="myFunction()" class="dropbtn work-list">
+                                                <!-- <i class="fa fa-filter ms-lg-2 d-none" aria-hidden="true"></i> -->
+                                                Activity
+                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                            </button>
+                                            <div id="myDropdown" class="dropdown-content">
+                                                <input
+                                                    type="text"
+                                                    placeholder="Search.."
+                                                    id="myInput"
+                                                    onkeyup="filterFunction()"
+                                                >
+                                                <a href="#about">About</a>
+                                                <a href="#base">Base</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-lg-4 ">
+                                        <div class="dropdown">
+                                            <button onclick="myFunction()" class="dropbtn work-list">
+                                                Dispute
+                                                <i class="fa fa-angle-down p-0 m-0" aria-hidden="true"></i>
+                                            </button>
+                                            <div id="myDropdown" class="dropdown-content">
+                                                <input
+                                                    type="text"
+                                                    placeholder="Search.."
+                                                    id="myInput"
+                                                    onkeyup="filterFunction()"
+                                                >
+                                                <a href="#about">About</a>
+                                                <a href="#base">Base</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-body  mt-4">
+                            <div class="row row-cols-1 row-cols-md-2 g-3 d-flex justify-content-between">
+                                <div class="col-lg-4 col-12 mb-3" id="dispute">
+                                    <div class="card" id="worklist-card">
+                                        <div class="card-body">
+                                            <div class="cardheader mb-2">
+                                                <div class="row d-flex justify-content-between align-items-center">
+                                                    <div class="col-6 d-flex">
+                                                        <span class="dispute-text">Dispute</span>
+                                                        <div class="new me-3">New</div>
+                                                    </div>
+                                                    <div class="col-6 text-start" id="left-arrow-dispute">
+                                                        <i
+                                                            class="fa fa-arrow-right"
+                                                            aria-hidden="true"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#property-card"
+                                                        ></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-text">
+                                                Property
+                                                <span id="property-number">1234680</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12 mb-3" id="dispute">
+                                    <div class="card" id="worklist-card">
+                                        <div class="card-body">
+                                            <div class="cardheader mb-2">
+                                                <div class="row d-flex justify-content-between align-items-center">
+                                                    <div class="col-6 d-flex">
+                                                        <span class="dispute-text">Dispute</span>
+                                                        <div class="new me-3">New</div>
+                                                    </div>
+                                                    <div
+                                                        class="col-6 text-start"
+                                                        id="left-arrow"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#property-card"
+                                                    >
+                                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-text">
+                                                Property
+                                                <span id="property-number">1234680</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12 mb-3" id="dispute">
+                                    <div class="card" id="worklist-card">
+                                        <div class="card-body">
+                                            <div class="cardheader mb-2">
+                                                <div class="row d-flex justify-content-between align-items-center">
+                                                    <div class="col-6 d-flex">
+                                                        <span class="dispute-text">Dispute</span>
+                                                        <div class="new me-3">New</div>
+                                                    </div>
+                                                    <div
+                                                        class="col-6 text-start"
+                                                        id="left-arrow"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#property-card"
+                                                    >
+                                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-text">
+                                                Property
+                                                <span id="property-number">1234680</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12 mb-3" id="dispute">
+                                    <div class="card" id="worklist-card">
+                                        <div class="card-body">
+                                            <div class="cardheader mb-2">
+                                                <div class="row d-flex justify-content-between align-items-center">
+                                                    <div class="col-6 d-flex">
+                                                        <span class="dispute-text">Dispute</span>
+                                                        <div class="new me-3">New</div>
+                                                    </div>
+                                                    <div
+                                                        class="col-6 text-start"
+                                                        id="left-arrow"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#property-card"
+                                                    >
+                                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-text">
+                                                Property
+                                                <span id="property-number">1234680</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12 mb-3" id="dispute">
+                                    <div class="card" id="worklist-card">
+                                        <div class="card-body">
+                                            <div class="cardheader mb-2">
+                                                <div class="row d-flex justify-content-between align-items-center">
+                                                    <div class="col-6 d-flex">
+                                                        <span class="dispute-text">Dispute</span>
+                                                        <div class="new me-3">New</div>
+                                                    </div>
+                                                    <div
+                                                        class="col-6 text-start"
+                                                        id="left-arrow"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#property-card"
+                                                    >
+                                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-text">
+                                                Property
+                                                <span id="property-number">1234680</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12 mb-3" id="dispute">
+                                    <div class="card" id="worklist-card">
+                                        <div class="card-body">
+                                            <div class="cardheader mb-2">
+                                                <div class="row d-flex justify-content-between align-items-center">
+                                                    <div class="col-6 d-flex">
+                                                        <span class="dispute-text">Dispute</span>
+                                                        <div class="new me-3">New</div>
+                                                    </div>
+                                                    <div
+                                                        class="col-6 text-start"
+                                                        id="left-arrow"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#property-card"
+                                                    >
+                                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-text">
+                                                Property
+                                                <span id="property-number">1234680</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12 mb-3" id="dispute">
+                                    <div class="card" id="worklist-card">
+                                        <div class="card-body">
+                                            <div class="cardheader mb-2">
+                                                <div class="row d-flex justify-content-between align-items-center">
+                                                    <div class="col-6 d-flex">
+                                                        <span class="dispute-text">Dispute</span>
+                                                        <div class="new me-3">New</div>
+                                                    </div>
+                                                    <div
+                                                        class="col-6 text-start"
+                                                        id="left-arrow"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#property-card"
+                                                    >
+                                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-text">
+                                                Property
+                                                <span id="property-number">1234680</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12 mb-3" id="claim-request">
+                                    <div class="card" id="worklist-card">
+                                        <div class="card-body">
+                                            <div class="cardheader mb-2">
+                                                <div class="row d-flex justify-content-between align-items-center">
+                                                    <div class="col-9 d-flex">
+                                                        <span class="claim-text">Claim Request</span>
+                                                        <div class="new  me-0 me-lg-3">New</div>
+                                                    </div>
+                                                    <div class="col-2 text-start" id="left-arrow-claim">
+                                                        <i
+                                                            class="fa fa-arrow-right"
+                                                            aria-hidden="true"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#property-card"
+                                                        ></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-text">
+                                                Property
+                                                <span id="property-number">1234680</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12 mb-3" id="dispute">
+                                    <div class="card" id="worklist-card">
+                                        <div class="card-body">
+                                            <div class="cardheader mb-2">
+                                                <div class="row d-flex justify-content-between align-items-center">
+                                                    <div class="col-6 d-flex">
+                                                        <span class="dispute-text">Dispute</span>
+                                                        <div class="new me-3">New</div>
+                                                    </div>
+                                                    <div
+                                                        class="col-6 text-start"
+                                                        id="left-arrow"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#property-card"
+                                                    >
+                                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-text">
+                                                Property
+                                                <span id="property-number">1234680</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12 mb3" id="due">
+                                    <div class="card" id="worklist-card">
+                                        <div class="card-body">
+                                            <div class="cardheader mb-2">
+                                                <div class="row d-flex justify-content-between align-items-center">
+                                                    <div class="col-6 d-flex">
+                                                        <span class="due-text">Due</span>
+                                                        <div class="new me-3">New</div>
+                                                    </div>
+                                                    <div class="col-6 text-start" id="left-arrow">
+                                                        <a href="dues.html">
+                                                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-text">
+                                                Property
+                                                <span id="property-number">1234680</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12 mb-3" id="claim-request">
+                                    <div class="card" id="worklist-card">
+                                        <div class="card-body">
+                                            <div class="cardheader mb-2">
+                                                <div class="row d-flex justify-content-between align-items-center">
+                                                    <div class="col-9 d-flex">
+                                                        <span class="claim-text">Claim Request</span>
+                                                        <div class="new  me-0 me-lg-3">New</div>
+                                                    </div>
+                                                    <div class="col-2 text-start" id="left-arrow-claim">
+                                                        <i
+                                                            class="fa fa-arrow-right"
+                                                            aria-hidden="true"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#property-card"
+                                                        ></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-text">
+                                                Property
+                                                <span id="property-number">1234680</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12 mb-3" id="claim-request">
+                                    <div class="card" id="worklist-card">
+                                        <div class="card-body">
+                                            <div class="cardheader mb-2">
+                                                <div class="row d-flex justify-content-between align-items-center">
+                                                    <div class="col-9 d-flex">
+                                                        <span class="claim-text">Claim Request</span>
+                                                        <div class="new  me-0 me-lg-3">New</div>
+                                                    </div>
+                                                    <div class="col-2 text-start" id="left-arrow-claim">
+                                                        <i
+                                                            class="fa fa-arrow-right"
+                                                            aria-hidden="true"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#property-card"
+                                                        ></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-text">
+                                                Property
+                                                <span id="property-number">1234680</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div
+
+                            </div>
+                            </div>
+                            <div class="footer row  justify-content-center page-navigation-footer">
+                                <div class="col-12 text-center d-flex justify-content-center">
+                                    <div class="pagination">
+                                        <a href="#">&laquo;</a>
+                                        <a href="#" class="active">1</a>
+                                        <a href="#"> 2</a>
+                                        <a href="#">3</a>
+                                        <a href="#">&raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL -->
+        <div
+            class="modal fade "
+            id="due-form"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="due-form"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <h4 class="modal-title" id="staticBackdropLabel">Dues</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Name of Dues</label>
+                            <input
+                                type="text"
+                                class="form-control dues-input "
+                                id="exampleFormControlInput1"
+                                placeholder="Enter Dues to be paid"
+                            >
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Description</label>
+                            <textarea class="form-control description " aria-label="With textarea" placeholder="Enter Dues to be paid"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Price</label>
+                            <input
+                                type="number"
+                                class="form-control dues-input "
+                                id="exampleFormControlInput1"
+                                placeholder="Enter price of Dues"
+                            >
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex  justify-content-start">
+                        <button type="button" class="save-btn" data-bs-dismiss="modal">Save</button>
+                        <button type="button" class="cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL FOR CARDS -->
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="property-card"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered modal-dialog-card modal-lg" style="max-width: 380px;">
+                <div class="modal-content">
+                    <img src="image/house.jpg" alt="" class="img-fluid">
+                    <div class="modal-content-body">
+                        <div class="modal-header row d-flex ">
+                            <div class="txt col-6">
+                                <h5>Property 1238909</h5>
+                            </div>
+                            <div class="stat col-6">
+                                <div class="status">
+                                    Under-Validation
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="address">
+                                    <p class="txt">Address</p>
+                                    <p class="text-muted  fs-6">No. 2 Adamu Bello Street. Maitama; Abuja</p>
+                                </div>
+                                <div class="features">
+                                    <div class="size">
+                                        <p class="txt">Size</p>
+                                        <p class="text-muted  fs-6">2.7 acres</p>
+                                    </div>
+                                    <div class="LGA">
+                                        <p class="txt">Local Government Area</p>
+                                        <p class="text-muted  fs-6">Wuse LGA</p>
+                                    </div>
+                                </div>
+                                <!-- ATTACHMENT OF DOCUMENT -->
+                                <div class="attachment">
+                                    <div class="txt mb-3">
+                                        <p>Attachment</p>
+                                    </div>
+                                    <div class="attached-document row d-flex justify-content-start ">
+                                        <div class="doc col-4 me-2">
+                                            <img
+                                                src="image/pdf.png"
+                                                alt=""
+                                                class="img-fluid"
+                                                style="height:100%;"
+                                            >
+                                        </div>
+                                        <div class="doc col-4 me-2">
+                                            <img
+                                                src="image/pdf.png"
+                                                alt=""
+                                                class="img-fluid"
+                                                style="height:100%;"
+                                            >
+                                        </div>
+                                        <div class="doc col-4 me-2">
+                                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="mt-4">
+                                        <div class="date text-muted text-start" id="date-comment">14 Jan</div>
+                                        <label for="exampleFormControlInput1" class="form-label txt">Disputer's Comment</label>
+                                        <textarea class="form-control  text-muted " aria-label="With textarea" rows="7"></textarea>
+                                    </div>
+                                    <div class="mt-4">
+                                        <div class="date text-muted text-start" id="date-reply">15 Jan</div>
+                                        <label for="exampleFormControlInput1" class="form-label txt">Reply</label>
+                                        <textarea class="form-control description text-muted " aria-label="With textarea" rows="7"></textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-footer justify-content-start mt-4 ms-3">
+                                    <button
+                                        class="btn add-document-btn "
+                                        id="add-property"
+                                        data-bs-toggle="modal"
+                                        data-bs-dismiss="modal"
+                                    >Approve</button>
+                                    <button
+                                        class="btn add-document-btn add-property"
+                                        id="add-property"
+                                        data-bs-toggle="modal"
+                                        data-bs-dismiss="modal"
+                                    >Decline</button>
+                                    <button
+                                        class="btn add-document-btn bg-white "
+                                        id="back"
+                                        data-bs-toggle="modal"
+                                        data-bs-dismiss="modal"
+                                    >Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/form.js"></script>
+        <script src="js/filter.js"></script>
+    </body>
+</html>

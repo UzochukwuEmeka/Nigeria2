@@ -1,0 +1,49 @@
+.status {
+  background-color: orange;
+  text-align: center;
+  border-radius: 15px;
+  color: white;
+  width: 100%;
+}
+.modal-content .img-fluid {
+  height: 30vh;
+  border-radius: 5px;
+}
+.modal-dialog-card {
+  max-height: 95vh;
+  width: 90%;
+  overflow: hidden;
+}
+.modal-content-body {
+  height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #fbfbfb;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.form-control {
+  background: #fbfbfb;
+}
+.doc {
+  background-color: #ececec;
+  border-radius: 10px;
+  width: 50px;
+  height: 59px;
+  text-align: center;
+  /* margin-top: 12px; */
+  padding: 15px;
+}
+.fa-plus-circle {
+  color: var(--primary-color);
+}
+.add-property {
+  background-color: rgb(187, 41, 41);
+  border-radius: 18px;
+}
+#back {
+  color: var(--primary-color);
+}
